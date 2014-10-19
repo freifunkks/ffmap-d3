@@ -22,13 +22,22 @@
 
   </head>
 
-  <body>
+  <body onload="resize(); init()">
     <header>
       <h1><a href="#url#" id="sitelink">#sitename#</a></h1>
       <ul>
         <li><a href="graph.html">Graph</a></li>
         <li><a href="geomap.html">Karte</a></li>
         <li><a href="list.html">Liste</a></li>
+        <li>
+          <form name="form">
+          <select name="link" SIZE="1" onChange="window.location.href = document.form.link.options[document.form.link.selectedIndex].value;">
+            <option value="http://map.freifunk-mwu.de/geomap.html"> Freifunk Mainz, Wiesbaden & Umgebung (all) </option>
+            <option value="http://gluonmap.freifunk-mainz.de/geomap.html"> Freifunk Mainz </option>
+            <option value="http://gluonmap.freifunk-wiesbaden.de/geomap.html"> Freifunk Wiesbaden </option>
+        </select>
+        </form>
+        </li>
       </ul>
       <button id="gpsbutton">Koordinaten beim nächsten Klick anzeigen</button>
     </header>
