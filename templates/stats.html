@@ -3,10 +3,10 @@
   <head>
     <meta http-equiv="content-type" content="text/html;charset=utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
-    <title>Freifunk #cityname# - Knotenkarte</title>
+    <title>Freifunk #cityname# - Statistiken</title>
     <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
     <link rel="stylesheet" type="text/css" href="css/style.css" />
-    <link rel="stylesheet" type="text/css" href="css/geomap.css" />
+    <link rel="stylesheet" type="text/css" href="css/list.css" />
 
     <style type="text/css">
       #map {
@@ -18,8 +18,8 @@
       .nodePopup .label { font-weight: bold; }
     </style>
 
-    <script data-main="js/geomap" type="text/javascript" src="js/lib/require.js"></script>
-
+    <script data-main="js/stats" type="text/javascript" src="js/lib/require.js"></script>
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
   </head>
 
   <body onload="resize(); init()">
@@ -33,16 +33,20 @@
         <li>
           <form name="form">
           <select name="link" SIZE="1" onChange="window.location.href = document.form.link.options[document.form.link.selectedIndex].value;">
-            <option value="http://map.freifunk-mwu.de/geomap.html"> Freifunk Mainz, Wiesbaden & Umgebung (all) </option>
-            <option value="http://gluonmap.freifunk-mainz.de/geomap.html"> Freifunk Mainz </option>
-            <option value="http://gluonmap.freifunk-wiesbaden.de/geomap.html"> Freifunk Wiesbaden </option>
+            <option value="http://map.freifunk-mwu.de/stats.html"> Freifunk Mainz, Wiesbaden & Umgebung (all) </option>
+            <option value="http://gluonmap.freifunk-mainz.de/stats.html"> Freifunk Mainz </option>
+            <option value="http://gluonmap.freifunk-wiesbaden.de/stats.html"> Freifunk Wiesbaden </option>
             <option selected value="#"> Community w&auml;hlen </option>
         </select>
         </form>
         </li>
       </ul>
-      <button id="gpsbutton">Koordinaten beim nächsten Klick anzeigen</button>
     </header>
-    <div id="map"></div>
+    <div class="container">
+      <h1>Statistiken</h1>
+            <div id="chart_div" style="width: 900px; height: 500px;"></div>
+        <div id="chart_div2" style="width: 900px; height: 500px;"></div>
+    </div>
   </body>
 </html>
+
