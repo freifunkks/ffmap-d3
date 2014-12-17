@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0" />
+    <title>Freifunk #cityname# - Traffic</title>
+    <link rel="stylesheet" type="text/css" href="css/leaflet.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/list.css" />
+
+    <style type="text/css">
+      #map {
+        width: 100%;
+        box-sizing:border-box;
+      }
+      .olPopup p { margin:0px; }
+      .nodePopup { font-size: 0.8em; }
+      .nodePopup .label { font-weight: bold; }
+      .ifblock {
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+          margin: .1em;
+          padding: .5em;
+          min-width: 10em;
+          border: #f9f9f9 1px solid;
+          border-radius: .5em;
+      }
+      .ifimg {
+           display: block;
+      }
+    </style>
+  </head>
+
+  <body onload="resize(); init()">
+    <header>
+      <h1><a href="#url#" id="sitelink">#sitename#</a></h1>
+      <ul>
+        <li><a href="graph.html">Graph</a></li>
+        <li><a href="geomap.html">Karte</a></li>
+        <li><a href="list.html">Liste</a></li>
+        <li><a href="stats.html">Stats</a></li>
+        <li><a href="traffic.html">Traffic</a></li>
+      </ul>
+    </header>
+    <div class="container">
+      <h1>Gateway Traffic</h1>
+        <h2>Mainz Mesh</h2>
+          <div class="ifblock">
+            <h2>#gate1_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate1_url#/traffic/mzVPN-summary.png" alt="#gate1_name# Mesh Summary" /> <br /> <img src="http://#gate1_url#/traffic/mzVPN-monthly.png" alt="#gate1_name# Mesh Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock">
+            <h2>#gate2_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate2_url#/traffic/mzVPN-summary.png" alt="#gate2_name# Mesh Summary" /> <br /> <img src="http://#gate2_url#/traffic/mzVPN-monthly.png" alt="#gate2_name# Mesh Monthly" /> <br />
+              </div>
+         </div>
+         <div class="ifblock">
+            <h2>#gate3_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate3_url#/traffic/mzVPN-summary.png" alt="#gate3_name# Mesh Summary" /> <br /> <img src="http://#gate3_url#/traffic/mzVPN-monthly.png" alt="#gate3_name# Mesh Monthly" /> <br />
+              </div>
+         </div>
+        <h2>Wiesbaden Mesh</h2>
+          <div class="ifblock">
+            <h2>#gate1_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate1_url#/traffic/wiVPN-summary.png" alt="#gate1_name# Mesh Summary" /> <br /> <img src="http://#gate1_url#/traffic/wiVPN-monthly.png" alt="#gate1_name# Mesh Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock">
+            <h2>#gate2_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate2_url#/traffic/wiVPN-summary.png" alt="#gate2_name# Mesh Summary" /> <br /> <img src="http://#gate2_url#/traffic/wiVPN-monthly.png" alt="#gate2_name# Mesh Monthly" /> <br />
+              </div>
+         </div>
+         <div class="ifblock">
+            <h2>#gate3_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate3_url#/traffic/wiVPN-summary.png" alt="#gate3_name# Mesh Summary" /> <br /> <img src="http://#gate3_url#/traffic/wiVPN-monthly.png" alt="#gate3_name# Mesh Monthly" /> <br />
+              </div>
+         </div>
+        <h2>Internet</h2>
+          <div class="ifblock">
+            <h2>#gate1_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate1_url#/traffic/exitVPN-summary.png" alt="#gate1_name# Internet Summary" /> <br /> <img src="http://#gate1_url#/traffic/exitVPN-monthly.png" alt="#gate1_name# Internet Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock">
+            <h2>#gate2_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate2_url#/traffic/exitVPN-summary.png" alt="#gate2_name# Internet Summary" /> <br /> <img src="http://#gate2_url#/traffic/exitVPN-monthly.png" alt="#gate2_name# Internet Monthly" /> <br />
+              </div>
+         </div>
+         <div class="ifblock">
+            <h2>#gate3_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate3_url#/traffic/exitVPN-summary.png" alt="#gate3_name# Internet Summary" /> <br /> <img src="http://#gate3_url#/traffic/exitVPN-monthly.png" alt="#gate3_name# Internet Monthly" /> <br />
+              </div>
+         </div>
+        <h2>Inter-City VPN</h2>
+          <div class="ifblock">
+            <h2>#gate1_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate1_url#/traffic/icVPN-summary.png" alt="#gate1_name# IC-VPN Summary" /> <br /> <img src="http://#gate1_url#/traffic/icVPN-monthly.png" alt="#gate1_name# IC-VPN Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock">
+            <h2>#gate2_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate2_url#/traffic/icVPN-summary.png" alt="#gate2_name# IC-VPN Summary" /> <br /> <img src="http://#gate2_url#/traffic/icVPN-monthly.png" alt="#gate2_name# IC-VPN Monthly" /> <br />
+              </div>
+         </div>
+         <div class="ifblock">
+            <h2>#gate3_name#</h2>
+              <div class="ifimg">
+                <img src="http://#gate3_url#/traffic/icVPN-summary.png" alt="#gate3_name# IC-VPN Summary" /> <br /> <img src="http://#gate3_url#/traffic/icVPN-monthly.png" alt="#gate3_name# IC-VPN Monthly" /> <br />
+              </div>
+         </div>
+    </div>
+  </body>
+</html>
