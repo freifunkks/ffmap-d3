@@ -1,5 +1,8 @@
 {
   "cityname": "Gotham City",
   "sitename": "gothamcity.freifunk.net",
-  "url": "/"
+  "url": "/",
+  "spinat": "spinat.freifunk-mwu.de",
+  "hinterschinken": "hinterschinken.freifunk-mwu.de",
+  "lotuswurzel": "lotuswurzel.freifunk-mwu.de"
 }
