@@ -1,11 +1,5 @@
 {
   "cityname": "Gotham City",
   "sitename": "gothamcity.freifunk.net",
-  "url": "/",
-  "gate1_name": "Spinat",
-  "gate2_name": "Hinterschinken",
-  "gate3_name": "Lotuswurzel",
-  "gate1_url": "spinat.freifunk-mwu.de",
-  "gate2_url": "hinterschinken.freifunk-mwu.de",
-  "gate3_url": "lotuswurzel.freifunk-mwu.de"
+  "url": "/"
 }
