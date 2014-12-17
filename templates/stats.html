@@ -16,6 +16,19 @@
       .olPopup p { margin:0px; }
       .nodePopup { font-size: 0.8em; }
       .nodePopup .label { font-weight: bold; }
+      .ifblock {
+          display: inline-block;
+          vertical-align: top;
+          text-align: center;
+          margin: .1em;
+          padding: .5em;
+          min-width: 10em;
+          border: #f9f9f9 1px solid;
+          border-radius: .5em;
+      }
+      .ifimg {
+           display: block;
+      }
     </style>
 
     <script data-main="js/stats" type="text/javascript" src="js/lib/require.js"></script>
@@ -56,14 +69,44 @@
         <div id="chart_div2" style="width: 900px; height: 500px;"></div>
       <h1>Gateway Traffic</h1>
         <h2>Spinat</h2>
-          <img src="http://spinat.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary">
-          <img src="http://spinat.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly">
+          <div class="ifblock" onclick="toggle('exitVPN')">
+            <h2>Internet</h2>
+              <div class="ifimg" id="exitVPN">
+                <img src="http://spinat.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary" /> <br /> <img src="http://spinat.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock" onclick="toggle('icVPN')">
+            <h2>Inter-City VPN</h2>
+              <div class="ifimg" id="icVPN">
+                <img src="http://spinat.freifunk-mwu.de/traffic/icVPN-summary.png" alt="IC-VPN Summary" /> <br /> <img src="http://spinat.freifunk-mwu.de/traffic/icVPN-monthly.png" alt="IC-VPN Monthly" /> <br />
+              </div>
+         </div>
         <h2>Hinterschinken</h2>
-          <img src="http://hinterschinken.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary">
-          <img src="http://hinterschinken.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly">
+          <div class="ifblock" onclick="toggle('exitVPN')">
+            <h2>Internet</h2>
+              <div class="ifimg" id="exitVPN">
+                <img src="http://hinterschinken.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary" /> <br /> <img src="http://hinterschinken.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock" onclick="toggle('icVPN')">
+            <h2>Inter-City VPN</h2>
+              <div class="ifimg" id="icVPN">
+                <img src="http://hinterschinken.freifunk-mwu.de/traffic/icVPN-summary.png" alt="IC-VPN Summary" /> <br /> <img src="http://hinterschinken.freifunk-mwu.de/traffic/icVPN-monthly.png" alt="IC-VPN Monthly" /> <br />
+              </div>
+         </div>
         <h2>Lotuswurzel</h2>
-          <img src="http://lotuswurzel.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary">
-          <img src="http://lotuswurzel.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly">
+          <div class="ifblock" onclick="toggle('exitVPN')">
+            <h2>Internet</h2>
+              <div class="ifimg" id="exitVPN">
+                <img src="http://lotuswurzel.freifunk-mwu.de/traffic/exitVPN-summary.png" alt="Internet Summary" /> <br /> <img src="http://lotuswurzel.freifunk-mwu.de/traffic/exitVPN-monthly.png" alt="Internet Monthly" /> <br />
+              </div>
+          </div>
+          <div class="ifblock" onclick="toggle('icVPN')">
+            <h2>Inter-City VPN</h2>
+              <div class="ifimg" id="icVPN">
+                <img src="http://lotuswurzel.freifunk-mwu.de/traffic/icVPN-summary.png" alt="IC-VPN Summary" /> <br /> <img src="http://lotuswurzel.freifunk-mwu.de/traffic/icVPN-monthly.png" alt="IC-VPN Monthly" /> <br />
+              </div>
+         </div>
     </div>
   </body>
 </html>
