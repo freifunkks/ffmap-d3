@@ -269,14 +269,6 @@ footer a {
   stroke: #FF7F0E;
 }
 
-.node.service {
-  stroke: #7D0552;
-}
-
-.node.backbone {
-  stroke: #565051;
-}
-
 .clients {
   fill: rgba(31, 119, 180, 0.6);
 }
