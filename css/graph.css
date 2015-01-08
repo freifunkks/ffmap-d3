@@ -243,6 +243,12 @@ footer a {
   stroke-width: 1.5px;
 }
 
+.link.backbone line {
+  stroke-dasharray: 4px 6px;
+  stroke-linecap: round;
+  stroke-width: 3px;
+}
+
 .link:hover line {
   stroke-width: 5px;
 }
