@@ -1,45 +1,79 @@
-#list {
+#nodelist,
+#gwlist,
+#backbonelist,
+#srvlist {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-#list thead th {
+#nodelist thead th,
+#gwlist thead th,
+#backbonelist thead th,
+#srvlist thead th {
   background-color: #F3F781;
   padding-right: 0px;
   cursor:pointer;
 }
 
-#list thead th div:after {
+#nodelist thead th div:after,
+#gwlist thead th div:after,
+#backbonelist thead th div:after,
+#srvlist thead th div:after {
    content: "\0000a0\0000a0";
 }
 
-#list thead th.tablesorter-headerAsc, #list thead th.tablesorter-headerDesc {
+#nodelist thead th.tablesorter-headerAsc,
+#nodelist thead th.tablesorter-headerDesc,
+#gwlist thead th.tablesorter-headerAsc,
+#gwlist thead th.tablesorter-headerDesc,
+#backbonelist thead th.tablesorter-headerAsc,
+#backbonelist thead th.tablesorter-headerDesc,
+#srvlist thead th.tablesorter-headerAsc,
+#srvlist thead th.tablesorter-headerDesc, {
   background-color: lightblue;
 }
 
-#list thead th.tablesorter-headerAsc div:after {
+#nodelist thead th.tablesorter-headerAsc div:after,
+#gwlist thead th.tablesorter-headerAsc div:after,
+#backbonelist thead th.tablesorter-headerAsc div:after,
+#srvlist thead th.tablesorter-headerAsc div:after {
    content: "\0000a0\25b4";
    color:blue;
 }
 
-#list thead th.tablesorter-headerDesc div:after {
+#nodelist thead th.tablesorter-headerDesc div:after,
+#gwlist thead th.tablesorter-headerDesc div:after,
+#backbonelist thead th.tablesorter-headerDesc div:after,
+#srvlist thead th.tablesorter-headerDesc div:after {
    content: "\0000a0\25be";
    color:blue;
 }
 
-#list td, table th {
+#nodelist td, table th,
+#gwlist td, table th,
+#backbonelist td, table th,
+#srvlist td, table th {
   border: 1pt solid #333;
   padding: 0.25em 0.5em;
 }
 
-#list tbody tr td:nth-child(2) {
+#nodelist tbody tr td:nth-child(2),
+#gwlist tbody tr td:nth-child(2),
+#backbonelist tbody tr td:nth-child(2),
+#srvlist tbody tr td:nth-child(2) {
   background: lightpink;
 }
 
-#list tbody tr.online td:nth-child(2) {
+#nodelist tbody tr.online td:nth-child(2),
+#gwlist tbody tr.online td:nth-child(2),
+#backbonelist tbody tr.online td:nth-child(2),
+#srvlist tbody tr.online td:nth-child(2) {
   background: lightgreen;
 }
 
-#list tfoot td {
+#nodelist tfoot td,
+#gwlist tfoot td,
+#backbonelist tfoot td,
+#srvlist tfoot td {
   font-weight: bold;
 }
