@@ -26,6 +26,13 @@ line.link {
   opacity: 0.5;
 }
 
+line.backbone {
+  stroke-width: 2.5pt;
+  opacity: 0.6;
+  stroke-dasharray: 4pt 6pt;
+  stroke-linecap: round;
+}
+
 #voronoi path {
   stroke: #000;
 }
